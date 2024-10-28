@@ -85,6 +85,10 @@ void MainWindow::on_btnRemove_clicked()
 
     int rowCount = ui->listWidget->count(); // ListWidget'taki satır sayısını al
     ui->label->setText(QString::number(rowCount) + " Item");
+
+    if (rowCount == 0) {
+        ui->txtTask->setFocus();
+    }
 }
 
 void MainWindow::on_btnRemoveAll_clicked()
